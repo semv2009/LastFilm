@@ -34,15 +34,26 @@ class LastFilmViewController: UIViewController {
     }
     
     func firstLoadData() {
-        showLoadingView((self.navigationController?.view!)!, text: "Loading films...")
+        showLoadingView(self.navigationController?.view, text: "Loading films...")
         viewModel.loadFilms() { result in
+            self.hideLoadingView()
             switch result {
             case .success(_):
+                self.tableView.addSubview(self.refreshControl)
                 self.tableView.reloadData()
-                self.hideLoadingView()
             case .failure(let error):
-                print(error)
+                self.refreshControl.removeFromSuperview()
+                self.showErrorAlert(error: error)
             }
+        }
+    }
+    
+    func emptyList() {
+        if viewModel.tableSource.count == 0 {
+            let view = EmptyView()
+            view.delegate = self
+            self.tableView.backgroundView = view
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         }
     }
     
@@ -63,17 +74,16 @@ class LastFilmViewController: UIViewController {
     
     func configureRefreshControl() {
         refreshControl.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
-        tableView.addSubview(refreshControl)
     }
     
     func refresh(_ sender: AnyObject) {
         viewModel.loadFilms() { result in
+            self.refreshControl.endRefreshing()
             switch result {
             case .success(_):
                 self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
             case .failure(let error):
-                print(error)
+                self.showErrorAlert(error: error)
             }
         }
     }
@@ -81,6 +91,9 @@ class LastFilmViewController: UIViewController {
 
 extension LastFilmViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if viewModel.tableSource.count == 0 {
+            emptyList()
+        }
         return viewModel.tableSource.count
     }
     
@@ -101,5 +114,12 @@ extension LastFilmViewController : UITableViewDataSource, UITableViewDelegate {
         let film = viewModel.tableSource[indexPath.row]
         let model = DetailFilmViewModel(film: film)
         self.navigationController?.pushViewController(DetailFilmViewController(viewModel: model), animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension LastFilmViewController: EmptyViewDelegate {
+    func emptyViewDidClickButton(emptyView: EmptyView) {
+        firstLoadData()
     }
 }

@@ -29,6 +29,7 @@ class DetailFilmViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = viewModel.title
         configureView()
     }
     

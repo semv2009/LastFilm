@@ -15,7 +15,7 @@ extension UIViewController {
         CustomHUD.instance?.show(in: self.view)
     }
     
-    func showLoadingView(_ view: UIView, text: String) {
+    func showLoadingView(_ view: UIView?, text: String) {
         CustomHUD.instance?.textLabel.text = text
         CustomHUD.instance?.show(in: view)
     }

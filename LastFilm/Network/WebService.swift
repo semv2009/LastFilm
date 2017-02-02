@@ -22,13 +22,13 @@ class WebService {
             guard let data = response.data else { return }
             do {
                 let xmlDoc = try AEXMLDocument(xml: data)
-                print(xmlDoc.xml)
                 if let xmlFilms = xmlDoc.root["channel"]["item"].all {
                     for xmlFilm in xmlFilms {
                         let film = Film(xmlElement: xmlFilm)
                         films.append(film)
                     }
                     result(Result.success(films))
+                    print(films.count)
                 }
             } catch(let error) {
                 result(Result.failure(error))

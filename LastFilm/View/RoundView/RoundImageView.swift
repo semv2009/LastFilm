@@ -23,7 +23,6 @@ class RoundImageView: UIView {
         super.init(frame: frame)
         setup()
         updateUI()
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -50,12 +49,10 @@ class RoundImageView: UIView {
     
     func loadImage(url: URL) {
         let progress = GradientCircularProgress()
-        
         let progressView = progress.showAtRatio(frame: imageView.frame, style: BlueIndicatorStyle())
         view.addSubview(progressView!)
         
         imageView.kf.setImage(with: url, progressBlock: { (currentSize, allSize) in
-            print(Float(currentSize) / Float(allSize))
             progress.updateRatio(CGFloat(currentSize) / CGFloat(allSize))
         }) { (image, error, cacheType, url) in
             progressView?.isHidden = true
@@ -65,8 +62,6 @@ class RoundImageView: UIView {
     
     func updateUI() {
         self.layoutIfNeeded()
-        print(imageView.frame.size.height)
         imageView.layer.cornerRadius = imageView.frame.size.height / 2
     }
-
 }
