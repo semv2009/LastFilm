@@ -1,0 +1,33 @@
+PODS:
+  - AEXML (4.0.2)
+  - Alamofire (4.3.0)
+  - GradientCircularProgress (3.6.0)
+  - JGProgressHUD (1.4)
+  - Kingfisher (3.3.3)
+
+DEPENDENCIES:
+  - AEXML
+  - Alamofire
+  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - JGProgressHUD
+  - Kingfisher
+
+EXTERNAL SOURCES:
+  GradientCircularProgress:
+    :git: https://github.com/keygx/GradientCircularProgress
+
+CHECKOUT OPTIONS:
+  GradientCircularProgress:
+    :commit: c90cb4044637127b0d66aab4a7bab9178684d79e
+    :git: https://github.com/keygx/GradientCircularProgress
+
+SPEC CHECKSUMS:
+  AEXML: 7de81f28c6c876a210f31924acc2e326cd01e162
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  GradientCircularProgress: 259d46ec93c2a3fe629199bbbdba98004afc8963
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
+  Kingfisher: 893215a42e5c2164e916f69463c68003092b104c
+
+PODFILE CHECKSUM: 148e3f53fb8d434092245819b666a0fc6156e473
+
+COCOAPODS: 1.2.0

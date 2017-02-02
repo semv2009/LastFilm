@@ -1,0 +1,6 @@
+framework module Pods_LastFilm {
+  umbrella header "Pods-LastFilm-umbrella.h"
+
+  export *
+  module * { export * }
+}
