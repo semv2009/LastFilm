@@ -28,7 +28,6 @@ class WebService {
                         let film = Film(xmlElement: xmlFilm)
                         films.append(film)
                     }
-                    films.sort(by: { $0.0.date > $0.1.date })
                     result(Result.success(films))
                 }
             } catch(let error) {

@@ -22,6 +22,10 @@
 		EBB7963E1E43440D001C9EEF /* LastFilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7963D1E43440D001C9EEF /* LastFilmViewModel.swift */; };
 		EBB796411E43522D001C9EEF /* CustomHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB796401E43522D001C9EEF /* CustomHUD.swift */; };
 		EBB796461E4352E4001C9EEF /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB796451E4352E4001C9EEF /* UIViewController+HUD.swift */; };
+		EBB796481E436DF2001C9EEF /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB796471E436DF2001C9EEF /* Date+String.swift */; };
+		EBB7964C1E4377A0001C9EEF /* DetailFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7964A1E4377A0001C9EEF /* DetailFilmViewController.swift */; };
+		EBB7964D1E4377A0001C9EEF /* DetailFilmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB7964B1E4377A0001C9EEF /* DetailFilmViewController.xib */; };
+		EBB796501E437E51001C9EEF /* DetailFilmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7964F1E437E51001C9EEF /* DetailFilmViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		EBB7963D1E43440D001C9EEF /* LastFilmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LastFilmViewModel.swift; path = ViewModel/LastFilm/LastFilmViewModel.swift; sourceTree = "<group>"; };
 		EBB796401E43522D001C9EEF /* CustomHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomHUD.swift; path = Helper/CustomHUD.swift; sourceTree = "<group>"; };
 		EBB796451E4352E4001C9EEF /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+HUD.swift"; path = "Extension/UIViewController+HUD.swift"; sourceTree = "<group>"; };
+		EBB796471E436DF2001C9EEF /* Date+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+String.swift"; path = "Extension/Date+String.swift"; sourceTree = "<group>"; };
+		EBB7964A1E4377A0001C9EEF /* DetailFilmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailFilmViewController.swift; path = ViewController/DetailFilm/DetailFilmViewController.swift; sourceTree = "<group>"; };
+		EBB7964B1E4377A0001C9EEF /* DetailFilmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailFilmViewController.xib; path = ViewController/DetailFilm/DetailFilmViewController.xib; sourceTree = "<group>"; };
+		EBB7964F1E437E51001C9EEF /* DetailFilmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailFilmViewModel.swift; path = ViewModel/DetailView/DetailFilmViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB796241E428655001C9EEF /* LastFilm */,
+				EBB796491E437745001C9EEF /* DetailFilm */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -182,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB7963C1E4343CD001C9EEF /* LastFilm */,
+				EBB7964E1E437E16001C9EEF /* DetailFilm */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -206,8 +216,26 @@
 			isa = PBXGroup;
 			children = (
 				EBB796451E4352E4001C9EEF /* UIViewController+HUD.swift */,
+				EBB796471E436DF2001C9EEF /* Date+String.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		EBB796491E437745001C9EEF /* DetailFilm */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7964A1E4377A0001C9EEF /* DetailFilmViewController.swift */,
+				EBB7964B1E4377A0001C9EEF /* DetailFilmViewController.xib */,
+			);
+			name = DetailFilm;
+			sourceTree = "<group>";
+		};
+		EBB7964E1E437E16001C9EEF /* DetailFilm */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7964F1E437E51001C9EEF /* DetailFilmViewModel.swift */,
+			);
+			name = DetailFilm;
 			sourceTree = "<group>";
 		};
 		EC6C53E9506FE8285EF0A017 /* Pods */ = {
@@ -283,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB7963A1E43197D001C9EEF /* FilmTableViewCell.xib in Resources */,
+				EBB7964D1E4377A0001C9EEF /* DetailFilmViewController.xib in Resources */,
 				EBB796151E428564001C9EEF /* LaunchScreen.storyboard in Resources */,
 				EBB796341E4317E9001C9EEF /* RoundImageView.xib in Resources */,
 				EBB796121E428564001C9EEF /* Assets.xcassets in Resources */,
@@ -352,7 +381,10 @@
 				EBB7962F1E429591001C9EEF /* Film.swift in Sources */,
 				EBB796391E43197D001C9EEF /* FilmTableViewCell.swift in Sources */,
 				EBB796461E4352E4001C9EEF /* UIViewController+HUD.swift in Sources */,
+				EBB796501E437E51001C9EEF /* DetailFilmViewModel.swift in Sources */,
+				EBB7964C1E4377A0001C9EEF /* DetailFilmViewController.swift in Sources */,
 				EBB7962B1E4286F9001C9EEF /* AppDelegate.swift in Sources */,
+				EBB796481E436DF2001C9EEF /* Date+String.swift in Sources */,
 				EBB796271E428689001C9EEF /* LastFilmViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

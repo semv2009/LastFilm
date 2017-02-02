@@ -65,6 +65,7 @@ class RoundImageView: UIView {
     
     func updateUI() {
         self.layoutIfNeeded()
+        print(imageView.frame.size.height)
         imageView.layer.cornerRadius = imageView.frame.size.height / 2
     }
 

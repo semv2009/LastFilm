@@ -11,6 +11,7 @@ import UIKit
 class LastFilmViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
     
     var viewModel: LastFilmViewModel
     
@@ -25,10 +26,24 @@ class LastFilmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
-        bindToViewModel()
         self.title = viewModel.title
-        viewModel.loadFilms()
+        configureTableView()
+        configureNavigationBar()
+        configureRefreshControl()
+        firstLoadData()
+    }
+    
+    func firstLoadData() {
+        showLoadingView((self.navigationController?.view!)!, text: "Loading films...")
+        viewModel.loadFilms() { result in
+            switch result {
+            case .success(_):
+                self.tableView.reloadData()
+                self.hideLoadingView()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func configureTableView() {
@@ -46,9 +61,20 @@ class LastFilmViewController: UIViewController {
         self.edgesForExtendedLayout = UIRectEdge()
     }
     
-    func bindToViewModel() {
-        viewModel.userDidLoadFilms = { [unowned self] model in
-            self.tableView.reloadData()
+    func configureRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    func refresh(_ sender: AnyObject) {
+        viewModel.loadFilms() { result in
+            switch result {
+            case .success(_):
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
@@ -69,5 +95,11 @@ extension LastFilmViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let film = viewModel.tableSource[indexPath.row]
+        let model = DetailFilmViewModel(film: film)
+        self.navigationController?.pushViewController(DetailFilmViewController(viewModel: model), animated: true)
     }
 }

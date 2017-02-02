@@ -7,24 +7,25 @@
 //
 
 import Foundation
+import Alamofire
 
 class LastFilmViewModel {
     
     var title: String {
         return "Last films"
     }
+    
     var tableSource = [Film]()
     
-    var userDidLoadFilms: ((_ viewModel: LastFilmViewModel) -> Void)?
-    
-    func loadFilms() {
+    func loadFilms(complete: @escaping (_ result: Result<LastFilmViewModel>) -> Void) {
         WebService.loadLastFilms { result in
             switch result {
             case .success(let films):
                 self.tableSource = films
-                self.userDidLoadFilms?(self)
+                self.tableSource.sort(by: { $0.0.date > $0.1.date })
+                complete(Result.success(self))
             case .failure(let error):
-                print(error)
+                complete(Result.failure(error))
             }
         }
     }

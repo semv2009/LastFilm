@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let keyWindow = UIWindow(frame: UIScreen.main.bounds)
         window = keyWindow
-        window?.rootViewController = UINavigationController(rootViewController: LastFilmViewController(viewModel: LastFilmViewModel()))
+        let controller = LastFilmViewController(viewModel: LastFilmViewModel())
+        window?.rootViewController = UINavigationController(rootViewController: controller)
         window?.makeKeyAndVisible()
         return true
     }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailFilmViewController" customModule="LastFilm" customModuleProvider="target">
+            <connections>
+                <outlet property="dateLabel" destination="sup-wS-I0f" id="1E3-KR-kt9"/>
+                <outlet property="imageView" destination="3PZ-It-gqV" id="SZh-9h-NAr"/>
+                <outlet property="linkLabel" destination="B4y-sW-9B1" id="RFe-bp-v23"/>
+                <outlet property="scrollView" destination="Osn-JS-3WW" id="sDs-7A-VFB"/>
+                <outlet property="titleLabel" destination="fEj-Pl-OHf" id="3im-4L-hVc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osn-JS-3WW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PZ-It-gqV" customClass="RoundImageView" customModule="LastFilm" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-Pl-OHf">
+                            <rect key="frame" x="8" y="383" width="359" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4y-sW-9B1">
+                            <rect key="frame" x="8" y="417.5" width="359" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sup-wS-I0f">
+                            <rect key="frame" x="8" y="446.5" width="359" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fEj-Pl-OHf" secondAttribute="trailing" constant="8" id="4Cn-40-Voh"/>
+                        <constraint firstItem="3PZ-It-gqV" firstAttribute="top" secondItem="Osn-JS-3WW" secondAttribute="top" id="5Mo-f9-9IJ"/>
+                        <constraint firstItem="3PZ-It-gqV" firstAttribute="height" secondItem="Osn-JS-3WW" secondAttribute="width" id="5bo-zS-zah"/>
+                        <constraint firstItem="3PZ-It-gqV" firstAttribute="leading" secondItem="Osn-JS-3WW" secondAttribute="leading" id="Fze-q8-sNC"/>
+                        <constraint firstAttribute="trailing" secondItem="B4y-sW-9B1" secondAttribute="trailing" constant="8" id="HDV-SZ-ekH"/>
+                        <constraint firstItem="B4y-sW-9B1" firstAttribute="leading" secondItem="Osn-JS-3WW" secondAttribute="leading" constant="8" id="HMq-Ld-LgR"/>
+                        <constraint firstItem="B4y-sW-9B1" firstAttribute="top" secondItem="fEj-Pl-OHf" secondAttribute="bottom" constant="8" id="LlW-Kf-i6W"/>
+                        <constraint firstItem="fEj-Pl-OHf" firstAttribute="top" secondItem="3PZ-It-gqV" secondAttribute="bottom" constant="8" id="OLJ-S4-eaz"/>
+                        <constraint firstAttribute="trailing" secondItem="sup-wS-I0f" secondAttribute="trailing" constant="8" id="WAs-Gd-JvK"/>
+                        <constraint firstItem="3PZ-It-gqV" firstAttribute="width" secondItem="Osn-JS-3WW" secondAttribute="width" id="WS5-Vn-hnD"/>
+                        <constraint firstItem="fEj-Pl-OHf" firstAttribute="leading" secondItem="Osn-JS-3WW" secondAttribute="leading" constant="8" id="YTx-Ue-z42"/>
+                        <constraint firstAttribute="bottom" secondItem="sup-wS-I0f" secondAttribute="bottom" id="eog-A2-cRt"/>
+                        <constraint firstItem="sup-wS-I0f" firstAttribute="leading" secondItem="Osn-JS-3WW" secondAttribute="leading" constant="8" id="mei-eD-gmB"/>
+                        <constraint firstAttribute="trailing" secondItem="3PZ-It-gqV" secondAttribute="trailing" id="qio-z7-1h2"/>
+                        <constraint firstItem="sup-wS-I0f" firstAttribute="top" secondItem="B4y-sW-9B1" secondAttribute="bottom" constant="8" id="t5K-U6-8X1"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Osn-JS-3WW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IvU-5d-6us"/>
+                <constraint firstAttribute="trailing" secondItem="Osn-JS-3WW" secondAttribute="trailing" id="kKs-38-ke5"/>
+                <constraint firstAttribute="bottom" secondItem="Osn-JS-3WW" secondAttribute="bottom" id="put-A4-YzG"/>
+                <constraint firstItem="Osn-JS-3WW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vls-dD-v6y"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="95.5"/>
+        </view>
+    </objects>
+</document>
