@@ -14,6 +14,7 @@ class LastFilmViewController: UIViewController {
     var refreshControl = UIRefreshControl()
     
     var viewModel: LastFilmViewModel
+    var firstRun = false
     
     init(viewModel: LastFilmViewModel) {
         self.viewModel = viewModel
@@ -35,13 +36,15 @@ class LastFilmViewController: UIViewController {
     
     func firstLoadData() {
         showLoadingView(self.navigationController?.view, text: "Loading films...")
-        viewModel.loadFilms() { result in
+        viewModel.loadFilms() { [unowned self] result in
             self.hideLoadingView()
+            self.firstRun = true
             switch result {
             case .success(_):
                 self.tableView.addSubview(self.refreshControl)
                 self.tableView.reloadData()
             case .failure(let error):
+                self.emptyList()
                 self.refreshControl.removeFromSuperview()
                 self.showErrorAlert(error: error)
             }
@@ -49,7 +52,7 @@ class LastFilmViewController: UIViewController {
     }
     
     func emptyList() {
-        if viewModel.tableSource.count == 0 {
+        if firstRun {
             let view = EmptyView()
             view.delegate = self
             self.tableView.backgroundView = view
@@ -77,13 +80,22 @@ class LastFilmViewController: UIViewController {
     }
     
     func refresh(_ sender: AnyObject) {
-        viewModel.loadFilms() { result in
-            self.refreshControl.endRefreshing()
-            switch result {
-            case .success(_):
-                self.tableView.reloadData()
-            case .failure(let error):
-                self.showErrorAlert(error: error)
+        viewModel.loadFilms() { [unowned self] result in
+            DispatchQueue.global().async {
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(_):
+                        self.tableView.reloadData()
+                    case .failure(let error):
+                        self.showErrorAlert(error: error)
+                    }
+                }
+                
+                sleep(1)
+                
+                DispatchQueue.main.async {
+                    self.refreshControl.endRefreshing()
+                }
             }
         }
     }
@@ -91,6 +103,7 @@ class LastFilmViewController: UIViewController {
 
 extension LastFilmViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         if viewModel.tableSource.count == 0 {
             emptyList()
         }

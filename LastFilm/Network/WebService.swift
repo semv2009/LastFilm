@@ -28,7 +28,6 @@ class WebService {
                         films.append(film)
                     }
                     result(Result.success(films))
-                    print(films.count)
                 }
             } catch(let error) {
                 result(Result.failure(error))
