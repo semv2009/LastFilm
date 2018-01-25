@@ -91,7 +91,7 @@ class LastFilmViewController: UIViewController {
                     }
                 }
                 
-                sleep(1)
+                sleep(2)
                 
                 DispatchQueue.main.async {
                     self.refreshControl.endRefreshing()
