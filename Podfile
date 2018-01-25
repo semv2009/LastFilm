@@ -9,4 +9,7 @@ pod 'Kingfisher'
 pod 'JGProgressHUD'
 pod 'AEXML'
 pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
+    target 'LastFilmTests' do
+        inherit! :search_paths
+    end
 end

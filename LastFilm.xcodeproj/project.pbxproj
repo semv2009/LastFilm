@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72ABC95C44A771AE9F4ABB74 /* Pods_LastFilm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9150D35A8DB1380EF5E8A /* Pods_LastFilm.framework */; };
+		84977981201990C10019BA18 /* LastFilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84977980201990C10019BA18 /* LastFilmTests.swift */; };
+		E25E7DF47C59DF0DCE2F4939 /* Pods_LastFilmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBE4ADA0CF7A5645FB3FB9F /* Pods_LastFilmTests.framework */; };
 		EBB796121E428564001C9EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB796111E428564001C9EEF /* Assets.xcassets */; };
 		EBB796151E428564001C9EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB796131E428564001C9EEF /* LaunchScreen.storyboard */; };
 		EBB796271E428689001C9EEF /* LastFilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB796251E428689001C9EEF /* LastFilmViewController.swift */; };
@@ -32,10 +34,25 @@
 		EBB7965C1E439901001C9EEF /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB7965B1E439901001C9EEF /* EmptyView.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84977983201990C10019BA18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB795FF1E428564001C9EEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB796061E428564001C9EEF;
+			remoteInfo = LastFilm;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4FB9150D35A8DB1380EF5E8A /* Pods_LastFilm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFilm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8497797E201990C10019BA18 /* LastFilmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LastFilmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84977980201990C10019BA18 /* LastFilmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFilmTests.swift; sourceTree = "<group>"; };
+		84977982201990C10019BA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9600101D36C8599E2ABC9AF3 /* Pods-LastFilm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD20C77ABC8F6991C280B31 /* Pods-LastFilm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilm.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm.release.xcconfig"; sourceTree = "<group>"; };
+		AEBE4ADA0CF7A5645FB3FB9F /* Pods_LastFilmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFilmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8FD5E4E33E2FF6FCEF7AF0 /* Pods-LastFilmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilmTests/Pods-LastFilmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB796071E428564001C9EEF /* LastFilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LastFilm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB796111E428564001C9EEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB796141E428564001C9EEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,9 +77,18 @@
 		EBB796541E4392D8001C9EEF /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+ErrorAlert.swift"; path = "Extension/UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
 		EBB796591E4398EB001C9EEF /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyView.swift; path = View/EmptyView/EmptyView.swift; sourceTree = "<group>"; };
 		EBB7965B1E439901001C9EEF /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmptyView.xib; path = View/EmptyView/EmptyView.xib; sourceTree = "<group>"; };
+		F1058591006A07AE96D5BC20 /* Pods-LastFilmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilmTests/Pods-LastFilmTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8497797B201990C10019BA18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25E7DF47C59DF0DCE2F4939 /* Pods_LastFilmTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB796041E428564001C9EEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,14 +104,25 @@
 			isa = PBXGroup;
 			children = (
 				4FB9150D35A8DB1380EF5E8A /* Pods_LastFilm.framework */,
+				AEBE4ADA0CF7A5645FB3FB9F /* Pods_LastFilmTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8497797F201990C10019BA18 /* LastFilmTests */ = {
+			isa = PBXGroup;
+			children = (
+				84977980201990C10019BA18 /* LastFilmTests.swift */,
+				84977982201990C10019BA18 /* Info.plist */,
+			);
+			path = LastFilmTests;
 			sourceTree = "<group>";
 		};
 		EBB795FE1E428564001C9EEF = {
 			isa = PBXGroup;
 			children = (
 				EBB796091E428564001C9EEF /* LastFilm */,
+				8497797F201990C10019BA18 /* LastFilmTests */,
 				EBB796081E428564001C9EEF /* Products */,
 				EC6C53E9506FE8285EF0A017 /* Pods */,
 				6DAB92346A6C85D030AFEE1E /* Frameworks */,
@@ -96,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB796071E428564001C9EEF /* LastFilm.app */,
+				8497797E201990C10019BA18 /* LastFilmTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,6 +309,8 @@
 			children = (
 				9600101D36C8599E2ABC9AF3 /* Pods-LastFilm.debug.xcconfig */,
 				AAD20C77ABC8F6991C280B31 /* Pods-LastFilm.release.xcconfig */,
+				DA8FD5E4E33E2FF6FCEF7AF0 /* Pods-LastFilmTests.debug.xcconfig */,
+				F1058591006A07AE96D5BC20 /* Pods-LastFilmTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -278,6 +318,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8497797D201990C10019BA18 /* LastFilmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84977985201990C10019BA18 /* Build configuration list for PBXNativeTarget "LastFilmTests" */;
+			buildPhases = (
+				DFB9BB65977029CEFB121798 /* [CP] Check Pods Manifest.lock */,
+				8497797A201990C10019BA18 /* Sources */,
+				8497797B201990C10019BA18 /* Frameworks */,
+				8497797C201990C10019BA18 /* Resources */,
+				28F6C496AC80917EE63529C7 /* [CP] Embed Pods Frameworks */,
+				9213230CBDBDCBDFECCE0D9D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84977984201990C10019BA18 /* PBXTargetDependency */,
+			);
+			name = LastFilmTests;
+			productName = LastFilmTests;
+			productReference = 8497797E201990C10019BA18 /* LastFilmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EBB796061E428564001C9EEF /* LastFilm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB796191E428564001C9EEF /* Build configuration list for PBXNativeTarget "LastFilm" */;
@@ -304,13 +365,18 @@
 		EBB795FF1E428564001C9EEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = niksemv;
 				TargetAttributes = {
+					8497797D201990C10019BA18 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 4C3U5C6W27;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBB796061E428564001C9EEF;
+					};
 					EBB796061E428564001C9EEF = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = XMWCW9ZJ6W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -329,11 +395,19 @@
 			projectRoot = "";
 			targets = (
 				EBB796061E428564001C9EEF /* LastFilm */,
+				8497797D201990C10019BA18 /* LastFilmTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8497797C201990C10019BA18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB796051E428564001C9EEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,9 +431,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -381,24 +466,83 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD698103F09923E76CAC7F53 /* [CP] Check Pods Manifest.lock */ = {
+		28F6C496AC80917EE63529C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LastFilmTests/Pods-LastFilmTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9213230CBDBDCBDFECCE0D9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LastFilmTests/Pods-LastFilmTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD698103F09923E76CAC7F53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LastFilm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB9BB65977029CEFB121798 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LastFilmTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8497797A201990C10019BA18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84977981201990C10019BA18 /* LastFilmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB796031E428564001C9EEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +567,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		84977984201990C10019BA18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB796061E428564001C9EEF /* LastFilm */;
+			targetProxy = 84977983201990C10019BA18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EBB796131E428564001C9EEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -435,6 +587,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		84977986201990C10019BA18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8FD5E4E33E2FF6FCEF7AF0 /* Pods-LastFilmTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4C3U5C6W27;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LastFilmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.internet.LastFilmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LastFilm.app/LastFilm";
+			};
+			name = Debug;
+		};
+		84977987201990C10019BA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1058591006A07AE96D5BC20 /* Pods-LastFilmTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4C3U5C6W27;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LastFilmTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.internet.LastFilmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LastFilm.app/LastFilm";
+			};
+			name = Release;
+		};
 		EBB796171E428564001C9EEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,7 +685,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -519,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -533,7 +743,7 @@
 			baseConfigurationReference = 9600101D36C8599E2ABC9AF3 /* Pods-LastFilm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XMWCW9ZJ6W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LastFilm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niksemv.prod.LastFilm;
@@ -547,7 +757,7 @@
 			baseConfigurationReference = AAD20C77ABC8F6991C280B31 /* Pods-LastFilm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XMWCW9ZJ6W;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LastFilm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.niksemv.prod.LastFilm;
@@ -559,6 +769,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84977985201990C10019BA18 /* Build configuration list for PBXNativeTarget "LastFilmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84977986201990C10019BA18 /* Debug */,
+				84977987201990C10019BA18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EBB796021E428564001C9EEF /* Build configuration list for PBXProject "LastFilm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
