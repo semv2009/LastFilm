@@ -1,3 +1,5 @@
 language: objective-c
-xcode_workspace: LastFilm.xcworkspace
-xcode_scheme: LastFilmTests
+osx_image: xcode9.2
+script:
+  - set -o pipefail
+  - xcodebuild -workspace "LastFilm.xcworkspace" -scheme "LastFilm" -sdk "iphonesimulator11.2" -destination "OS=11.2,name=iPhone 6S" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c;

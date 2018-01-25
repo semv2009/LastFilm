@@ -45,6 +45,8 @@ class DetailFilmViewController: UIViewController {
             imageView.loadImage(url: url)
         }
         configureLinkLabel()
+        linkLabel.accessibilityIdentifier = "linkLabel"
+        view.accessibilityIdentifier = "DetailFilmViewController"
     }
     
     func configureLinkLabel() {

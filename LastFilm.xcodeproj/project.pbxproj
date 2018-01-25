@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		72ABC95C44A771AE9F4ABB74 /* Pods_LastFilm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB9150D35A8DB1380EF5E8A /* Pods_LastFilm.framework */; };
 		84977981201990C10019BA18 /* LastFilmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84977980201990C10019BA18 /* LastFilmTests.swift */; };
+		849779992019B4710019BA18 /* OpenFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849779982019B4710019BA18 /* OpenFilm.swift */; };
 		E25E7DF47C59DF0DCE2F4939 /* Pods_LastFilmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBE4ADA0CF7A5645FB3FB9F /* Pods_LastFilmTests.framework */; };
 		EBB796121E428564001C9EEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB796111E428564001C9EEF /* Assets.xcassets */; };
 		EBB796151E428564001C9EEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB796131E428564001C9EEF /* LaunchScreen.storyboard */; };
@@ -42,6 +43,13 @@
 			remoteGlobalIDString = EBB796061E428564001C9EEF;
 			remoteInfo = LastFilm;
 		};
+		849779932019AA220019BA18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBB795FF1E428564001C9EEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB796061E428564001C9EEF;
+			remoteInfo = LastFilm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,9 @@
 		8497797E201990C10019BA18 /* LastFilmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LastFilmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84977980201990C10019BA18 /* LastFilmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFilmTests.swift; sourceTree = "<group>"; };
 		84977982201990C10019BA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8497798E2019AA220019BA18 /* LastFilmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LastFilmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		849779922019AA220019BA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849779982019B4710019BA18 /* OpenFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFilm.swift; sourceTree = "<group>"; };
 		9600101D36C8599E2ABC9AF3 /* Pods-LastFilm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD20C77ABC8F6991C280B31 /* Pods-LastFilm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFilm.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFilm/Pods-LastFilm.release.xcconfig"; sourceTree = "<group>"; };
 		AEBE4ADA0CF7A5645FB3FB9F /* Pods_LastFilmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFilmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8497798B2019AA220019BA18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB796041E428564001C9EEF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,11 +136,21 @@
 			path = LastFilmTests;
 			sourceTree = "<group>";
 		};
+		8497798F2019AA220019BA18 /* LastFilmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				849779982019B4710019BA18 /* OpenFilm.swift */,
+				849779922019AA220019BA18 /* Info.plist */,
+			);
+			path = LastFilmUITests;
+			sourceTree = "<group>";
+		};
 		EBB795FE1E428564001C9EEF = {
 			isa = PBXGroup;
 			children = (
 				EBB796091E428564001C9EEF /* LastFilm */,
 				8497797F201990C10019BA18 /* LastFilmTests */,
+				8497798F2019AA220019BA18 /* LastFilmUITests */,
 				EBB796081E428564001C9EEF /* Products */,
 				EC6C53E9506FE8285EF0A017 /* Pods */,
 				6DAB92346A6C85D030AFEE1E /* Frameworks */,
@@ -134,6 +162,7 @@
 			children = (
 				EBB796071E428564001C9EEF /* LastFilm.app */,
 				8497797E201990C10019BA18 /* LastFilmTests.xctest */,
+				8497798E2019AA220019BA18 /* LastFilmUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -339,6 +368,24 @@
 			productReference = 8497797E201990C10019BA18 /* LastFilmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8497798D2019AA220019BA18 /* LastFilmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 849779952019AA220019BA18 /* Build configuration list for PBXNativeTarget "LastFilmUITests" */;
+			buildPhases = (
+				8497798A2019AA220019BA18 /* Sources */,
+				8497798B2019AA220019BA18 /* Frameworks */,
+				8497798C2019AA220019BA18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				849779942019AA220019BA18 /* PBXTargetDependency */,
+			);
+			name = LastFilmUITests;
+			productName = LastFilmUITests;
+			productReference = 8497798E2019AA220019BA18 /* LastFilmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EBB796061E428564001C9EEF /* LastFilm */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB796191E428564001C9EEF /* Build configuration list for PBXNativeTarget "LastFilm" */;
@@ -375,6 +422,12 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = EBB796061E428564001C9EEF;
 					};
+					8497798D2019AA220019BA18 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 4C3U5C6W27;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EBB796061E428564001C9EEF;
+					};
 					EBB796061E428564001C9EEF = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -396,12 +449,20 @@
 			targets = (
 				EBB796061E428564001C9EEF /* LastFilm */,
 				8497797D201990C10019BA18 /* LastFilmTests */,
+				8497798D2019AA220019BA18 /* LastFilmUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8497797C201990C10019BA18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8497798C2019AA220019BA18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -543,6 +604,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8497798A2019AA220019BA18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				849779992019B4710019BA18 /* OpenFilm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EBB796031E428564001C9EEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -572,6 +641,11 @@
 			isa = PBXTargetDependency;
 			target = EBB796061E428564001C9EEF /* LastFilm */;
 			targetProxy = 84977983201990C10019BA18 /* PBXContainerItemProxy */;
+		};
+		849779942019AA220019BA18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB796061E428564001C9EEF /* LastFilm */;
+			targetProxy = 849779932019AA220019BA18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -642,6 +716,58 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LastFilm.app/LastFilm";
+			};
+			name = Release;
+		};
+		849779962019AA220019BA18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4C3U5C6W27;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LastFilmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.internet.LastFilmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LastFilm;
+			};
+			name = Debug;
+		};
+		849779972019AA220019BA18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4C3U5C6W27;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LastFilmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.internet.LastFilmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LastFilm;
 			};
 			name = Release;
 		};
@@ -774,6 +900,15 @@
 			buildConfigurations = (
 				84977986201990C10019BA18 /* Debug */,
 				84977987201990C10019BA18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		849779952019AA220019BA18 /* Build configuration list for PBXNativeTarget "LastFilmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				849779962019AA220019BA18 /* Debug */,
+				849779972019AA220019BA18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

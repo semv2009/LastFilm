@@ -32,6 +32,7 @@ class LastFilmViewController: UIViewController {
         configureNavigationBar()
         configureRefreshControl()
         firstLoadData()
+        view.accessibilityIdentifier = "LastFilmViewController"
     }
     
     func firstLoadData() {
